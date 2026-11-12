@@ -1,0 +1,80 @@
+:root {
+  --bg: #08080A;
+  --bg-elev: #0E0E11;
+  --surface: #131317;
+  --border: #212127;
+  --border-2: #2D2D35;
+  --text: #ECECEF;
+  --text-2: #A2A2AC;
+  --text-3: #6C6C76;
+  --accent: #A3263B;
+  --accent-hi: #BF3A50;
+  --accent-soft: rgba(191, 58, 80, .11);
+  --accent-line: rgba(191, 58, 80, .36);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--text); font: 16px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent-hi); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+header.topo { border-bottom: 1px solid var(--border); }
+header.topo .wrap { display: flex; align-items: center; gap: 12px; height: 68px; }
+.marca { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 650; font-size: 19px; letter-spacing: -.02em; }
+.marca:hover { text-decoration: none; }
+.marca img { width: 32px; height: 32px; }
+.marca b { color: var(--accent-hi); font-weight: 650; }
+header.topo nav { margin-left: auto; display: flex; gap: 22px; font-size: 14px; }
+header.topo nav a { color: var(--text-2); }
+header.topo nav a:hover { color: var(--text); text-decoration: none; }
+
+.hero { padding: 96px 0 72px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: -40% -10% auto; height: 520px; pointer-events: none;
+  background: radial-gradient(50% 60% at 50% 40%, rgba(191, 58, 80, .16), transparent 70%); }
+.hero > * { position: relative; }
+.hero img { width: 88px; height: 88px; }
+.hero h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1.05; margin: 22px 0 10px; letter-spacing: -.035em; font-weight: 700; }
+.hero h1 b { color: var(--accent-hi); font-weight: 700; }
+.lema { color: var(--text-3); letter-spacing: .04em; font-size: 15px; margin: 0 0 22px; }
+.hero p.sub { max-width: 640px; margin: 0 auto; color: var(--text-2); font-size: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 30px; }
+.chip { font-size: 13px; padding: 6px 13px; border-radius: 20px; border: 1px solid var(--accent-line); background: var(--accent-soft); color: var(--text); }
+
+section.recursos { padding: 24px 0 72px; }
+.grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+.card .ic { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-hi); margin-bottom: 14px; }
+.card .ic svg { width: 19px; height: 19px; }
+.card h3 { margin: 0 0 6px; font-size: 16px; }
+.card p { margin: 0; color: var(--text-2); font-size: 14.5px; }
+
+section.seguranca { padding: 0 0 80px; }
+.faixa { border: 1px solid var(--border); border-radius: 16px; background: var(--bg-elev); padding: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.faixa h2 { margin: 0 0 8px; font-size: 22px; letter-spacing: -.02em; }
+.faixa p { margin: 0; color: var(--text-2); font-size: 15px; }
+.faixa ul { margin: 0; padding-left: 18px; color: var(--text-2); font-size: 15px; }
+.faixa li { margin: 6px 0; }
+
+footer { border-top: 1px solid var(--border); padding: 26px 0 40px; color: var(--text-3); font-size: 13.5px; }
+footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+footer .dir { margin-left: auto; display: flex; gap: 18px; }
+
+/* página de texto (privacidade) */
+.doc { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+.doc h1 { font-size: 34px; letter-spacing: -.03em; margin: 0 0 6px; }
+.doc .data { color: var(--text-3); font-size: 14px; margin: 0 0 34px; }
+.doc h2 { font-size: 19px; margin: 34px 0 8px; letter-spacing: -.01em; }
+.doc p, .doc li { color: var(--text-2); }
+.doc ul { padding-left: 20px; }
+.doc li { margin: 6px 0; }
+.doc strong { color: var(--text); font-weight: 600; }
+.destaque { border-left: 2px solid var(--accent-hi); background: var(--accent-soft); padding: 14px 18px; border-radius: 0 10px 10px 0; color: var(--text); }
+
+@media (max-width: 820px) {
+  .grade { grid-template-columns: 1fr; }
+  .faixa { grid-template-columns: 1fr; }
+  header.topo nav { gap: 14px; }
+  .hero { padding: 64px 0 48px; }
+}

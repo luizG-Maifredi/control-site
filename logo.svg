@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <mask id="ct-corte">
+      <rect width="64" height="64" fill="#fff"/>
+      <circle cx="32" cy="32" r="15" fill="#000"/>
+      <polygon points="32,28.6 64,64 0,64" fill="#000"/>
+    </mask>
+  </defs>
+  <g fill="#ECECEF" mask="url(#ct-corte)">
+    <circle cx="32" cy="32" r="23"/>
+    <polygon id="ct-dente" points="25.6,11 27.4,3.6 36.6,3.6 38.4,11"/>
+    <use href="#ct-dente" transform="rotate(45 32 32)"/>
+    <use href="#ct-dente" transform="rotate(90 32 32)"/>
+    <use href="#ct-dente" transform="rotate(135 32 32)"/>
+    <use href="#ct-dente" transform="rotate(180 32 32)"/>
+    <use href="#ct-dente" transform="rotate(225 32 32)"/>
+    <use href="#ct-dente" transform="rotate(270 32 32)"/>
+    <use href="#ct-dente" transform="rotate(315 32 32)"/>
+  </g>
+  <polygon fill="#BF3A50" points="32,32.2 50.4,53 40.9,53 32,42.6 23.1,53 13.6,53"/>
+</svg>
